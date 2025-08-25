@@ -20,6 +20,9 @@ export default function AddExpenseScreen() {
             <ThemedView style={styles.titleContainer}>
                 <ThemedText type="title">Reports</ThemedText>
             </ThemedView>
+            <ThemedView style={styles.titleContainer}>
+                <ThemedText type="subtitle">(Under Construction)</ThemedText> 
+            </ThemedView>
         </ParallaxScrollView>
     );
 }
