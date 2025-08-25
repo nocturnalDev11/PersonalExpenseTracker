@@ -32,6 +32,7 @@ const MAPPING = {
     'checkmark': 'check',
     'arrow.uturn.left': 'undo',
     'arrow.uturn.right': 'redo',
+    'arrow.left': 'arrow-back',
 } as IconMapping;
 
 /**

@@ -1,29 +1,28 @@
-import { StyleSheet } from 'react-native';
-
 import { CustomScrollView } from '@/components/CustomScrollView';
+import { Navbar } from '@/components/Navbar';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { IconSymbol } from '@/components/ui/IconSymbol';
+import { useRouter } from 'expo-router';
+import { TouchableOpacity } from 'react-native';
 
 export default function AddExpenseScreen() {
+    const router = useRouter();
+
     return (
-        <CustomScrollView>
-            <ThemedText type="title">Reports</ThemedText>
-            <ThemedView style={styles.titleContainer}>
+        <ThemedView style={{ flex: 1 }}>
+            <Navbar
+                title="Add Expenses"
+                leftAction={
+                    <TouchableOpacity onPress={() => router.push("/expenses")}>
+                        <IconSymbol name="arrow.left" size={22} color="#3b82f6" />
+                    </TouchableOpacity>
+                }
+            />
+            <CustomScrollView>
+                <ThemedText type="title">Add Expenses</ThemedText>
                 <ThemedText type="subtitle">(Under Construction)</ThemedText> 
-            </ThemedView>
-        </CustomScrollView>
+            </CustomScrollView>
+        </ThemedView>
     );
 }
-
-const styles = StyleSheet.create({
-    headerImage: {
-        color: '#808080',
-        bottom: -90,
-        left: -35,
-        position: 'absolute',
-    },
-    titleContainer: {
-        flexDirection: 'row',
-        gap: 8,
-    },
-});
