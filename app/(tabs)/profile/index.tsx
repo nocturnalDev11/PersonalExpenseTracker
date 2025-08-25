@@ -6,21 +6,20 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 import { useRouter } from 'expo-router';
 import { TouchableOpacity } from 'react-native';
 
-export default function AddExpenseScreen() {
+export default function UserScreen() {
     const router = useRouter();
-
     return (
         <ThemedView style={{ flex: 1 }}>
             <Navbar
-                title="Add Expenses"
-                leftAction={
-                    <TouchableOpacity onPress={() => router.push("/expenses")}>
-                        <IconSymbol name="arrow.left" size={22} color="#ffffff" />
+                title="User Name"
+                rightAction={
+                    <TouchableOpacity onPress={() => router.push("/settings")}>
+                        <IconSymbol name="gearshape.fill" size={22} color="#ffffff" />
                     </TouchableOpacity>
                 }
             />
             <CustomScrollView>
-                <ThemedText type="title">Add Expenses</ThemedText>
+                <ThemedText type="title">User Profile</ThemedText>
                 <ThemedText type="subtitle">(Under Construction)</ThemedText> 
             </CustomScrollView>
         </ThemedView>

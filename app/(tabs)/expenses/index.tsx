@@ -16,7 +16,7 @@ export default function ExpensesScreen() {
                 title="Expenses"
                 rightAction={
                     <TouchableOpacity onPress={() => router.push("/expenses/add")}>
-                        <IconSymbol name="plus" size={22} color="#3b82f6" />
+                        <IconSymbol name="plus" size={22} color="#ffffff" />
                     </TouchableOpacity>
                 }
             />

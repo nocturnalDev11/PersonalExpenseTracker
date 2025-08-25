@@ -47,10 +47,10 @@ export default function TabLayout() {
                 }}
             />
             <Tabs.Screen
-                name="settings/index"
+                name="profile/index"
                 options={{
-                    title: 'Settings',
-                    tabBarIcon: ({ color }) => <IconSymbol size={28} name="gearshape.fill" color={color} />,
+                    title: 'Profile',
+                    tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.crop.circle" color={color} />,
                 }}
             />
         </Tabs>

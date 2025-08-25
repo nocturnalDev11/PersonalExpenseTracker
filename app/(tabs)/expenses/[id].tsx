@@ -15,7 +15,7 @@ export default function ExpenseIdScreen() {
                 title="Expenses"
                 leftAction={
                     <TouchableOpacity onPress={() => router.push("/expenses")}>
-                        <IconSymbol name="arrow.left" size={22} color="#3b82f6" />
+                        <IconSymbol name="arrow.left" size={22} color="#ffffff" />
                     </TouchableOpacity>
                 }
             />

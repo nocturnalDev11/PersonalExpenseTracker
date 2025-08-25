@@ -33,6 +33,7 @@ const MAPPING = {
     'arrow.uturn.left': 'undo',
     'arrow.uturn.right': 'redo',
     'arrow.left': 'arrow-back',
+    'person.crop.circle': 'account-circle',
 } as IconMapping;
 
 /**

@@ -1,5 +1,4 @@
 import { IconSymbol } from "@/components/ui/IconSymbol";
-import { useThemeColor } from "@/hooks/useThemeColor";
 import { useRouter } from "expo-router";
 import { Text, TouchableOpacity, View } from "react-native";
 
@@ -13,8 +12,8 @@ type NavbarProps = {
 export function Navbar({ title, showBack = false, leftAction, rightAction }: NavbarProps) {
     const router = useRouter();
 
-    const backgroundColor = useThemeColor({}, "background");
-    const textColor = useThemeColor({}, "text");
+    const backgroundColor = "#10B981";
+    const textColor = "#FFFFFF";
 
     return (
         <View
@@ -26,7 +25,7 @@ export function Navbar({ title, showBack = false, leftAction, rightAction }: Nav
                 paddingVertical: 25,
                 backgroundColor,
                 borderBottomWidth: 0.5,
-                borderBottomColor: "rgba(120,120,120,0.3)",
+                borderBottomColor: "rgba(255,255,255,0.3)",
                 shadowColor: "#000",
                 shadowOpacity: 0.08,
                 shadowRadius: 6,
