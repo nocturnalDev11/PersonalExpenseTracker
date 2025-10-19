@@ -1,13 +1,19 @@
-import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import Container from '@/components/ui/Container';
 import Header from '@/components/ui/Header';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import LinkTile from '@/components/ui/Links/LinkTile';
 import Section from '@/components/ui/Section';
 import React, { useState } from 'react';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 
 export default function HomeScreen() {
+    const links = [
+        { href: '/add-expense', icon: 'plus', label: 'Add Expense' },
+        { href: '/reports', icon: 'chart.bar.fill', label: 'Reports' },
+        { href: '/budget', icon: 'wallet.pass.fill', label: 'Budget' },
+    ];
+
     const [expenses, setExpenses] = useState([
         { id: 1, title: 'Groceries', amount: 1250, category: 'Food', date: '2025-10-18' },
         { id: 2, title: 'Coffee', amount: 150, category: 'Food', date: '2025-10-18' },
@@ -22,18 +28,18 @@ export default function HomeScreen() {
 
     const getCategoryIcon = (category: string) => {
         switch (category) {
-        case 'Food':
-            return 'fork.knife';
-        case 'Transport':
-            return 'car.fill';
-        case 'Entertainment':
-            return 'film.fill';
-        case 'Shopping':
-            return 'bag.fill';
-        case 'Bills':
-            return 'bolt.fill';
-        default:
-            return 'wallet.bifold.fill';
+            case 'Food':
+                return 'fork.knife';
+            case 'Transport':
+                return 'car.fill';
+            case 'Entertainment':
+                return 'film.fill';
+            case 'Shopping':
+                return 'bag.fill';
+            case 'Bills':
+                return 'bolt.fill';
+            default:
+                return 'wallet.bifold.fill';
         }
     };
 
@@ -56,12 +62,12 @@ export default function HomeScreen() {
                             </Text>
                         </View>
                         <View
-                        style={{
-                            width: 1,
-                            height: 30,
-                            backgroundColor: '#818CF8',
-                            marginHorizontal: 16,
-                        }}
+                            style={{
+                                width: 1,
+                                height: 30,
+                                backgroundColor: '#818CF8',
+                                marginHorizontal: 16,
+                            }}
                         />
                         <View style={{ flex: 1 }}>
                             <Text style={{ fontSize: 12, color: '#E0E7FF' }}>Transactions</Text>
@@ -73,9 +79,9 @@ export default function HomeScreen() {
                 </Card>
 
                 <Section style={{ flexDirection: 'row', gap: 12, marginTop: 24 }}>
-                    <Button label="Add Expense" icon="plus" iconPosition="top" variant="primary" />
-                    <Button label="Reports" icon="chart.bar.fill" iconPosition="top" />
-                    <Button label="Budget" icon="wallet.bifold.fill" iconPosition="top" />
+                    {links.map((link) => (
+                        <LinkTile key={link.href} {...link} />
+                    ))}
                 </Section>
 
                 <Section>
