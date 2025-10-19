@@ -34,6 +34,13 @@ const MAPPING = {
     'arrow.uturn.right': 'redo',
     'arrow.left': 'arrow-back',
     'person.crop.circle': 'account-circle',
+
+    'fork.knife': 'restaurant',
+    'car.fill': 'directions-car',
+    'film.fill': 'movie',
+    'bag.fill': 'shopping-bag',
+    'lightbulb.fill': 'lightbulb',
+    'wallet.bifold.fill': 'account-balance-wallet',
 } as IconMapping;
 
 /**
