@@ -12,7 +12,7 @@ type NavbarProps = {
 export function Navbar({ title, showBack = false, leftAction, rightAction }: NavbarProps) {
     const router = useRouter();
 
-    const backgroundColor = "#10B981";
+    const backgroundColor = "#6366F1";
     const textColor = "#FFFFFF";
 
     return (

@@ -9,9 +9,9 @@ import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 
 export default function HomeScreen() {
     const links = [
-        { href: '/add-expense', icon: 'plus', label: 'Add Expense' },
+        { href: '/expenses/add', icon: 'plus', label: 'Add Expense' },
         { href: '/reports', icon: 'chart.bar.fill', label: 'Reports' },
-        { href: '/budget', icon: 'wallet.pass.fill', label: 'Budget' },
+        { href: '/budget', icon: 'wallet.bifold.fill', label: 'Budget' },
     ];
 
     const [expenses, setExpenses] = useState([

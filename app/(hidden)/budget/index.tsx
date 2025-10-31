@@ -6,13 +6,13 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 import { useRouter } from 'expo-router';
 import { TouchableOpacity } from 'react-native';
 
-export default function ReportsScreen() {
+export default function BudgetScreen() {
     const router = useRouter();
 
     return (
         <ThemedView style={{ flex: 1 }}>
             <Navbar
-                title="Reports"
+                title="Budget"
                 leftAction={
                     <TouchableOpacity onPress={() => router.push("/")}>
                         <IconSymbol name="arrow.left" size={22} color="#ffffff" />
@@ -20,7 +20,7 @@ export default function ReportsScreen() {
                 }
             />
             <CustomScrollView>
-                <ThemedText type="title">Reports</ThemedText>
+                <ThemedText type="title">Budget</ThemedText>
                 <ThemedText type="subtitle">(Under Construction)</ThemedText> 
             </CustomScrollView>
         </ThemedView>
